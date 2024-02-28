@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Sobrevivência</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game">
+        <h1>Jogo de Sobrevivência</h1>
+        <div id="status">
+            <p>Comida: <span id="food">50</span>% | Água: <span id="water">50</span>% | Abrigo: <span id="shelter">Não Construído</span></p>
+            <p>Energia: <span id="energy">100</span>% | Fadiga: <span id="fatigue">0</span>%</p>
+            <p>Estado: <span id="health">Saudável</span></p>
+            <p>Inventário: <span id="inventory">Nenhum item</span></p>
+            <p>Nível: <span id="level">1</span> | Experiência: <span id="experience">0</span></p>
+        </div>
+        <div id="actions">
+            <button onclick="gatherFood()">Procurar comida</button>
+            <button onclick="gatherWater()">Procurar água</button>
+            <button onclick="buildShelter()">Construir Abrigo</button>
+            <button onclick="hunt()">Caçar</button>
+            <button onclick="useItem()">Usar Item</button>
+            <button id="crafting" onclick="craftItem()">Crafting</button>
+            <button onclick="openCraftingBook()">Livro de Craftings</button>
+            <button onclick="searchItem()">Procurar Item</button>
+            <button onclick="rest()">Descansar</button>
+        </div>
+    </div>
+    <div id="craftingBook" style="display: none;">
+        <h2>Livro de Craftings</h2>
+        <ul id="craftingList">
+            <!-- Lista de craftings será preenchida dinamicamente pelo JavaScript -->
+        </ul>
+        <button onclick="closeCraftingBook()">Fechar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
